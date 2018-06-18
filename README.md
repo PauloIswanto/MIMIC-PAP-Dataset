@@ -10,6 +10,7 @@ Additionally, records were limited to the first 6000 seconds and included only i
 
 * All numerics had at least 100 values (Numeric values were recorded every minute. Thus, for a 6000 second waveform record there should be 6000/60 = 100 numeric values).
 * The PAP waveform contained values (to avoid all NaN waveforms).
+* The PAP waveform yielded at least 1000 onsets using the [wabp](https://www.physionet.org/physiotools/matlab/wfdb-app-matlab/html/wabp.html) function with no more than a 10 second duration between consecutive onsets. This is to ensure the waveform quality is good enough for any further processing and that there will be no excessively large beat due to wabp missing some onsets.
 
 The dataset can be loaded using Matlab and records are in the following format:
 
